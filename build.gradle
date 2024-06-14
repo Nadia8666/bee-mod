@@ -21,6 +21,14 @@ repositories {
 			includeGroup("com.eliotlash.mclib")
 		}
 	}
+	maven {
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
+	}
+	maven {
+		name = "Ladysnake Libs"
+		url = 'https://maven.ladysnake.org/releases'
+	}
 }
 
 // This is the repositories block in your build.gradle. NOT the one in publishing, or in buildscript. If it does not exist already, create it.
@@ -53,6 +61,7 @@ dependencies {
 	// GeckoLib
 	modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
 	implementation("com.eliotlash.mclib:mclib:20")
+	modImplementation "dev.emi:trinkets:${trinkets_version}"
 }
 
 processResources {
