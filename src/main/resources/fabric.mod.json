@@ -3,9 +3,10 @@
 	"id": "beemod",
 	"version": "${version}",
 	"name": "bee mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "idk",
 	"authors": [
-		"Me!"
+		"nadia",
+		"not nadia"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
