@@ -10,24 +10,35 @@ base {
 	archivesName = project.archives_base_name
 }
 
+
+
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+		content {
+			includeGroupByRegex("software\\.bernie.*")
+			includeGroup("com.eliotlash.mclib")
+		}
+	}
 }
 
+// This is the repositories block in your build.gradle. NOT the one in publishing, or in buildscript. If it does not exist already, create it.
+/*
 loom {
-    splitEnvironmentSourceSets()
+    //splitEnvironmentSourceSets()
 
 	mods {
 		"beemod" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
+			//sourceSet sourceSets.client
 		}
 	}
+}
 
+ */
+fabricApi {
+	configureDataGeneration()
 }
 
 dependencies {
@@ -38,7 +49,10 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
+	// GeckoLib
+	modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
+	implementation("com.eliotlash.mclib:mclib:20")
 }
 
 processResources {

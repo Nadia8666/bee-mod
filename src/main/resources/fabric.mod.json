@@ -5,8 +5,7 @@
 	"name": "bee mod",
 	"description": "idk",
 	"authors": [
-		"nadia",
-		"not nadia"
+		"nadia"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -21,14 +20,13 @@
 		],
 		"client": [
 			"com.ihatebees.BeeModClient"
+		],
+		"fabric-datagen": [
+			"com.ihatebees.AutomaticDataGenerator"
 		]
 	},
 	"mixins": [
-		"beemod.mixins.json",
-		{
-			"config": "beemod.client.mixins.json",
-			"environment": "client"
-		}
+		"beemod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
