@@ -1,7 +1,6 @@
 package com.ihatebees.item.client;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.CoconutBeltArmorItem;
 import com.ihatebees.item.custom.CoconutCanisterArmorItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;

@@ -1,11 +1,17 @@
 package com.ihatebees.item.custom;
 
+import com.ihatebees.BeeMod;
 import com.ihatebees.item.client.CoconutBeltRenderer;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.entity.EquipmentSlot;
+import dev.emi.trinkets.api.SlotReference;
+import dev.emi.trinkets.api.TrinketItem;
+import dev.emi.trinkets.api.client.TrinketRenderer;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.item.BuiltinModelItemRenderer;
+import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
@@ -14,17 +20,16 @@ import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class CoconutBeltArmorItem extends ArmorItem implements GeoItem {
+public class CoconutBeltTrinketItem extends TrinketItem implements GeoItem, TrinketRenderer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public CoconutBeltArmorItem(ArmorMaterial armorMaterial, Type type, Settings properties) {
-        super(armorMaterial, type, properties);
+    public CoconutBeltTrinketItem(Settings properties) {
+        super(properties);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
 
@@ -33,15 +38,12 @@ public class CoconutBeltArmorItem extends ArmorItem implements GeoItem {
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
-            private GeoArmorRenderer<?> renderer;
+            private CoconutBeltRenderer renderer;
 
             @Override
-            public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
-                                                                        EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
+            public BuiltinModelItemRenderer getCustomRenderer() {
                 if (this.renderer == null)
                     this.renderer = new CoconutBeltRenderer();
-
-                this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 
                 return this.renderer;
             }
@@ -67,5 +69,12 @@ public class CoconutBeltArmorItem extends ArmorItem implements GeoItem {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
+    }
+
+    @Override
+    public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
+        ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
+
+        BeeMod.GenericHeadTrinket(matrices,contextModel,entity,headYaw,headPitch);
     }
 }
