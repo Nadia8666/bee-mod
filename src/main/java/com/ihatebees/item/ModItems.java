@@ -1,7 +1,7 @@
 package com.ihatebees.item;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.CoconutBeltArmorItem;
+import com.ihatebees.item.custom.CoconutBeltTrinketItem;
 import com.ihatebees.item.custom.TestHatArmorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -21,7 +21,7 @@ public class ModItems {
 
     // custom armor
     public static final Item CoconutBelt = registerItem("coconutbelt",
-            new CoconutBeltArmorItem(ModArmor.GENERIC_ARMOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+            new CoconutBeltTrinketItem(new FabricItemSettings().maxCount(1)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
