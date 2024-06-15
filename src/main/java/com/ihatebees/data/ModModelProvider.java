@@ -22,5 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CoconutBelt, Models.GENERATED);
         itemModelGenerator.register(ModItems.CoconutCanister, Models.GENERATED);
         itemModelGenerator.register(ModItems.TestHat, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.StarSaw, Models.HANDHELD);
     }
 }

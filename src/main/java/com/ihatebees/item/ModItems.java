@@ -3,6 +3,7 @@ package com.ihatebees.item;
 import com.ihatebees.BeeMod;
 import com.ihatebees.item.custom.CoconutBeltTrinketItem;
 import com.ihatebees.item.custom.CoconutCanisterArmorItem;
+import com.ihatebees.item.custom.StarSawSwordItem;
 import com.ihatebees.item.custom.TestHatArmorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -25,7 +26,8 @@ public class ModItems {
             new CoconutCanisterArmorItem(ModArmor.GENERIC_ARMOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
 
     // custom weapons
-    public static final Item StarSaw = registerItem("starsaw", new SwordItem(ToolMaterials.WOOD, 1, 1, new FabricItemSettings()));
+    public static final Item StarSaw = registerItem("starsaw",
+            new StarSawSwordItem(ModToolMaterials.BITCH, 9, 16, new FabricItemSettings()));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
