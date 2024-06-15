@@ -11,7 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup BEE_ITEMS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(BeeMod.MODID, "beeitems"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.beeitems"))
                     .icon(() -> new ItemStack(ModItems.TestThing)).entries((displayContext, entries) -> {
@@ -21,6 +21,10 @@ public class ModItemGroups {
                         // armor
                         entries.add(ModItems.CoconutBelt);
                         entries.add(ModItems.TestHat);
+                        entries.add(ModItems.CoconutCanister);
+
+                        // weapons
+                        entries.add(ModItems.StarSaw);
                     }).build());
     public static void registerItemGroups() {
         BeeMod.LOGGER.info("Registering Item Groups for " + BeeMod.MODID);
