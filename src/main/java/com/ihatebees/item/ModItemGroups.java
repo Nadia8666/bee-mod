@@ -21,6 +21,10 @@ public class ModItemGroups {
                         // armor
                         entries.add(ModItems.CoconutBelt);
                         entries.add(ModItems.TestHat);
+                        entries.add(ModItems.CoconutCanister);
+
+                        // weapons
+                        entries.add(ModItems.StarSaw);
                     }).build());
     public static void registerItemGroups() {
         BeeMod.LOGGER.info("Registering Item Groups for " + BeeMod.MODID);

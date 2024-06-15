@@ -1,6 +1,5 @@
 package com.ihatebees.item.custom;
 
-import com.ihatebees.item.client.CoconutBeltRenderer;
 import com.ihatebees.item.client.CoconutCanisterRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
