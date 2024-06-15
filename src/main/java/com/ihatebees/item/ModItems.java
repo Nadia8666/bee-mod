@@ -21,7 +21,7 @@ public class ModItems {
 
     // custom armor
     public static final Item CoconutBelt = registerItem("coconutbelt",
-            new CoconutBeltArmorItem(new FabricItemSettings()));
+            new CoconutBeltArmorItem(new FabricItemSettings().maxCount(1)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
