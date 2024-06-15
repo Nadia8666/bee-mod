@@ -43,7 +43,6 @@ public class BeeMod implements ModInitializer {
 			if(model instanceof PlayerEntityModel)
 			{
 				PlayerEntityModel<AbstractClientPlayerEntity> ctx = (PlayerEntityModel<AbstractClientPlayerEntity>) model;
-
 			}
 		}
 	}

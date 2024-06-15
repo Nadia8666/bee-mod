@@ -20,16 +20,15 @@ import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class CoconutBeltArmorItem extends TrinketItem implements GeoItem, TrinketRenderer {
+public class CoconutBeltTrinketItem extends TrinketItem implements GeoItem, TrinketRenderer {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public CoconutBeltArmorItem(Settings properties) {
+    public CoconutBeltTrinketItem(Settings properties) {
         super(properties);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
