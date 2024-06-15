@@ -7,9 +7,7 @@ import com.ihatebees.item.custom.TestHatArmorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -25,6 +23,7 @@ public class ModItems {
             new CoconutBeltArmorItem(ModArmor.GENERIC_ARMOR, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item CoconutCanister = registerItem("coconutcanister",
             new CoconutCanisterArmorItem(ModArmor.GENERIC_ARMOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item StarSaw = registerItem("starsaw", new SwordItem(ToolMaterials.WOOD, 1, 1, new FabricItemSettings()));
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
     }
