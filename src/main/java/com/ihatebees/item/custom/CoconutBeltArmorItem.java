@@ -1,6 +1,7 @@
 package com.ihatebees.item.custom;
 
 import com.ihatebees.item.client.CoconutBeltRenderer;
+import dev.emi.trinkets.api.TrinketItem;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -20,11 +21,11 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class CoconutBeltArmorItem extends ArmorItem implements GeoItem {
+public class CoconutBeltArmorItem extends TrinketItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public CoconutBeltArmorItem(ArmorMaterial armorMaterial, Type type, Settings properties) {
-        super(armorMaterial, type, properties);
+    public CoconutBeltArmorItem(Settings properties) {
+        super(properties);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
 
