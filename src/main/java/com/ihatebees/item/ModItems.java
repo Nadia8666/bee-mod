@@ -27,9 +27,13 @@ public class ModItems {
     // custom weapons
     public static final Item StarSaw = registerItem("starsaw",
             new StarSawSwordItem(ModToolMaterials.BITCH, 9, 16, new FabricItemSettings()));
+    public static final Item DarkScythe = registerItem("darkscythe",
+            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 17,-3.5f, new FabricItemSettings()));
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
     }
+
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BeeMod.MODID, name), item);

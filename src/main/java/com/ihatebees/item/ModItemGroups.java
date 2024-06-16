@@ -25,6 +25,7 @@ public class ModItemGroups {
 
                         // weapons
                         entries.add(ModItems.StarSaw);
+                        entries.add(ModItems.DarkScythe);
                     }).build());
     public static void registerItemGroups() {
         BeeMod.LOGGER.info("Registering Item Groups for " + BeeMod.MODID);
