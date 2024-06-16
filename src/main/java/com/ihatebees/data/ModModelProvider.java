@@ -19,8 +19,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.CoconutBelt, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.CoconutBelt, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.CoconutCanister, Models.GENERATED);
         itemModelGenerator.register(ModItems.TestHat, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.StarSaw, Models.HANDHELD);
     }
 }

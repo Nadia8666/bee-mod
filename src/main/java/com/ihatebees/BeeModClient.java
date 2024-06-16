@@ -1,9 +1,12 @@
 package com.ihatebees;
 
 import com.ihatebees.item.ModItems;
+import com.ihatebees.particle.ModParticles;
+import com.ihatebees.particle.custom.STARSWEEP;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
@@ -15,6 +18,9 @@ public class BeeModClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering
+
+		ParticleFactoryRegistry.getInstance().register(ModParticles.STARSWEEP, STARSWEEP.Factory::new);
+
 		TrinketRendererRegistry.registerRenderer(ModItems.CoconutBelt,
 				(stack, slotReference, contextModel, matrices, vertexConsumers, light, entity, limbAngle, limbDistance, tickDelta, animationProgress, headYaw, headPitch) -> {
 					net.minecraft.world.World world = MinecraftClient.getInstance().world;

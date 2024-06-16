@@ -3,7 +3,8 @@
 	"package": "com.ihatebees.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"mixinFUkcthihsgame"
 	],
 	"injectors": {
 		"defaultRequire": 1
