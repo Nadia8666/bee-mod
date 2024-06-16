@@ -1,0 +1,8 @@
+{
+  "item_saw_sound": {
+   "subtitle": "sounds.beemod.item_saw_sound",
+    "sounds": [
+      "beemod:item_saw_sound"
+    ]
+  }
+}

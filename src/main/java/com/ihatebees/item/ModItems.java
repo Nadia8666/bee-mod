@@ -1,17 +1,16 @@
 package com.ihatebees.item;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.CoconutBeltTrinketItem;
-import com.ihatebees.item.custom.CoconutCanisterArmorItem;
-import com.ihatebees.item.custom.StarSawSwordItem;
-import com.ihatebees.item.custom.TestHatArmorItem;
+import com.ihatebees.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     // test armor
@@ -28,8 +27,6 @@ public class ModItems {
     // custom weapons
     public static final Item StarSaw = registerItem("starsaw",
             new StarSawSwordItem(ModToolMaterials.BITCH, 9, 16, new FabricItemSettings()));
-
-
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
     }

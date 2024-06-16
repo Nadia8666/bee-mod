@@ -1,6 +1,7 @@
 package com.ihatebees.item.custom;
 
 import com.ihatebees.item.client.CoconutCanisterRenderer;
+import com.ihatebees.sound.ModSounds;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.sound.Sound;
 import net.minecraft.client.sound.SoundExecutor;
@@ -8,6 +9,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -32,7 +34,7 @@ public class StarSawSwordItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        attacker.getWorld().playSound((PlayerEntity) null, attacker.getX(),attacker.getY(),attacker.getZ(), SoundEvents.ITEM_CROSSBOW_SHOOT, attacker.getSoundCategory(), 1.0F, 1.0F);
+        attacker.getWorld().playSound((PlayerEntity) null, attacker.getX(),attacker.getY(),attacker.getZ(), ModSounds.ITEM_SAW_SOUND, SoundCategory.BLOCKS, 1.0F, 1.0F);
        return super.postHit(stack,target,attacker);
     }
 }

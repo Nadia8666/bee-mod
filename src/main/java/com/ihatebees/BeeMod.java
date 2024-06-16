@@ -3,6 +3,7 @@ package com.ihatebees;
 import com.ihatebees.item.ModItemGroups;
 import com.ihatebees.item.ModItems;
 import com.ihatebees.particle.ModParticles;
+import com.ihatebees.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -33,7 +34,7 @@ public class BeeMod implements ModInitializer {
 		LOGGER.info("Registering Bee Mod Things");
 
 		ModItemGroups.registerItemGroups();
-
+		ModSounds.registerSounds();
 		ModItems.registerModItems();
 		ModParticles.RegisterParticles();
 		LOGGER.info("Bee Mod Registration Complete");
