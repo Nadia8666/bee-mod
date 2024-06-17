@@ -1,5 +1,6 @@
 package com.ihatebees;
 
+import com.ihatebees.block.ModBlocks;
 import com.ihatebees.item.ModItemGroups;
 import com.ihatebees.item.ModItems;
 import com.ihatebees.particle.ModParticles;
@@ -37,7 +38,7 @@ public class BeeMod implements ModInitializer {
 		ModSounds.registerSounds();
 		ModItems.registerModItems();
 		ModParticles.RegisterParticles();
-
+		ModBlocks.registerModBlocks();
 		LOGGER.info("Bee Mod Registration Complete");
 	}
 
