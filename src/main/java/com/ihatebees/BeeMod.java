@@ -37,6 +37,7 @@ public class BeeMod implements ModInitializer {
 		ModSounds.registerSounds();
 		ModItems.registerModItems();
 		ModParticles.RegisterParticles();
+
 		LOGGER.info("Bee Mod Registration Complete");
 	}
 
