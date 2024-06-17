@@ -31,8 +31,10 @@ public class ModItems {
             new StarSawSwordItem(ModToolMaterials.BITCH, 9, 16, new FabricItemSettings()));
     public static final Item DarkScythe = registerItem("darkscythe",
             new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 17,-3.5f, new FabricItemSettings()));
-
-
+    public static final Item Gummyballer = registerItem("gummyballer", // TEMPORARY SWORD ONLY
+            new SwordItem(ModToolMaterials.ENDGAME, 7, -3, new FabricItemSettings()));
+    public static final Item TidePopper = registerItem("tidepopper",
+            new SwordItem(ModToolMaterials.ENDGAME, 8,-2.8f, new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
