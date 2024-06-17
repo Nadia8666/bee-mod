@@ -1,5 +1,6 @@
 package com.ihatebees.data;
 
+import com.eliotlash.mclib.math.functions.classic.Mod;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import com.ihatebees.item.ModItems;
@@ -19,11 +20,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        //itemModelGenerator.register(ModItems.CoconutBelt, Models.GENERATED);
+     //   itemModelGenerator.register(ModItems.CoconutBelt, Models.GENERATED);
+     //   itemModelGenerator.register(ModItems.CoconutCanister, Models.GENERATED);
+     //   itemModelGenerator.register(ModItems.TestHat, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.CoconutCanister, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TestHat, Models.GENERATED);
-
-        itemModelGenerator.register(ModItems.StarSaw, Models.HANDHELD);
+     //   itemModelGenerator.register(ModItems.StarSaw, Models.HANDHELD);
+        //  itemModelGenerator.register(ModItems.DarkScythe, Models.HANDHELD);
     }
 }

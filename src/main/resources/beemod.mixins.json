@@ -4,7 +4,7 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"ExampleMixin",
-		"mixinFUkcthihsgame"
+		"helloyesmixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

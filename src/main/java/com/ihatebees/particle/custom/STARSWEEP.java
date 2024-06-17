@@ -19,7 +19,7 @@ public class STARSWEEP extends SpriteBillboardParticle {
         this.x = xd;
         this.y = yd;
         this.z = zd;
-        this.scale *= 0.75F;
+        this.scale *= 3F;
         this.maxAge = 10;
         this.setSpriteForAge(spriteSet);
 

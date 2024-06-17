@@ -6,7 +6,10 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial{
-    BITCH(0,10,0f,0f,0, () -> Ingredient.ofItems(ModItems.TestThing));
+
+    BITCH(0,10,0f,0f,0, () -> Ingredient.ofItems(ModItems.TestThing)),
+    ENDGAME(0,2500,0f,0f,0, () -> Ingredient.ofItems(ModItems.TestThing));
+
 
     private final int mininglevel;
     private final int itemDurability;
