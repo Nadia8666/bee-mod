@@ -26,7 +26,7 @@ public abstract class HitEffectMixin extends LivingEntity {
 			double d = (double) (-MathHelper.sin(this.getYaw() * 0.017453292F));
 			double e = (double) MathHelper.cos(this.getYaw() * 0.017453292F);
 			if (this.getWorld() instanceof ServerWorld) {
-				((ServerWorld) this.getWorld()).spawnParticles(ModParticles.STARSWEEP_PARTICLE, this.getX() + d, this.getBodyY(0.5), this.getZ() + e, 0, d, 0.0, e, 0.0);
+				((ServerWorld) this.getWorld()).spawnParticles(ModParticles.STARSWEEP_PARTICLE, this.getX() + d, this.getBodyY(0.75), this.getZ() + e, 0, d, 0.0, e, 0.0);
 			}
 
 			did_trigger = true;

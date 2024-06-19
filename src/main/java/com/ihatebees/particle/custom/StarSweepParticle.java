@@ -17,7 +17,7 @@ public class StarSweepParticle extends SpriteBillboardParticle {
         this.red = f;
         this.green = f;
         this.blue = f;
-        this.scale = 1.0F - (float)d * 0.5F;
+        this.scale = 2.0F - (float)d * 0.5F;
         this.setSpriteForAge(spriteProvider);
     }
 

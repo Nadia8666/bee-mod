@@ -7,6 +7,9 @@ import net.minecraft.registry.tag.TagKey;
 public class PassiveItem extends GoatHornItem  {
     public PassiveItem(Settings settings, TagKey<Instrument> instrumentTag) {
         super(settings, instrumentTag);
+
+
+
     }
 }
 

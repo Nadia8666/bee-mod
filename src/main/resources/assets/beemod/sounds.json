@@ -4,5 +4,11 @@
     "sounds": [
       "beemod:item_saw_sound"
     ]
+  },
+  "item_gummystar": {
+    "subtitle": "sounds.beemod.item_gummystar",
+    "sounds": [
+      "beemod:item_gummystar"
+    ]
   }
 }

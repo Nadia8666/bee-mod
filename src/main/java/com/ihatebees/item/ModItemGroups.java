@@ -1,5 +1,6 @@
 package com.ihatebees.item;
 
+import com.ihatebees.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import com.ihatebees.BeeMod;
 import net.minecraft.item.ItemGroup;
@@ -26,6 +27,13 @@ public class ModItemGroups {
                         // weapons
                         entries.add(ModItems.StarSaw);
                         entries.add(ModItems.DarkScythe);
+                        entries.add(ModItems.Gummyballer);
+
+                        // blocks
+                        entries.add(ModBlocks.PACKHONEY);
+                        entries.add(ModBlocks.BIG_PACKHONEY);
+                        entries.add(ModBlocks.HUGE_PACKHONEY);
+                        entries.add(ModBlocks.EXTREME_PACKHONEY);
                     }).build());
     public static void registerItemGroups() {
         BeeMod.LOGGER.info("Registering Item Groups for " + BeeMod.MODID);
