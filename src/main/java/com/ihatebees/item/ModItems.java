@@ -32,9 +32,13 @@ public class ModItems {
     public static final Item DarkScythe = registerItem("darkscythe",
             new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 17,-3.5f, new FabricItemSettings()));
     public static final Item Gummyballer = registerItem("gummyballer", // TEMPORARY SWORD ONLY
-            new SwordItem(ModToolMaterials.ENDGAME, 7, -3, new FabricItemSettings()));
+            new SwordItem(ModToolMaterials.ENDGAME, 8, -3, new FabricItemSettings()));
     public static final Item TidePopper = registerItem("tidepopper",
-            new SwordItem(ModToolMaterials.ENDGAME, 8,-2.8f, new FabricItemSettings()));
+            new SwordItem(ModToolMaterials.ENDGAME, 7,-2.7f, new FabricItemSettings()));
+
+    // custom implementations
+    public static final Item GummyStar = registerItem("gummystar",
+            new GummyStarPassiveItem(new FabricItemSettings().maxCount(1)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
