@@ -5,14 +5,10 @@ import com.ihatebees.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 
 public class ModItems {
     // test armor
@@ -28,10 +24,10 @@ public class ModItems {
 
     // custom weapons
     public static final Item StarSaw = registerItem("starsaw",
-            new StarSawSwordItem(ModToolMaterials.BITCH, 9, 16, new FabricItemSettings()));
+            new StarSawSwordItem(ModToolMaterials.BITCH, 6, 16, new FabricItemSettings()));
     public static final Item DarkScythe = registerItem("darkscythe",
-            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 17,-3.5f, new FabricItemSettings()));
-    public static final Item Gummyballer = registerItem("gummyballer", // TEMPORARY SWORD ONLY
+            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 11,-3.5f, new FabricItemSettings()));
+    public static final Item Gummyballer = registerItem("gummyballer",
             new SwordItem(ModToolMaterials.ENDGAME, 8, -3, new FabricItemSettings()));
     public static final Item TidePopper = registerItem("tidepopper",
             new SwordItem(ModToolMaterials.ENDGAME, 7,-2.7f, new FabricItemSettings()));
@@ -39,7 +35,10 @@ public class ModItems {
     // custom implementations
     public static final Item GummyStar = registerItem("gummystar",
             new GummyStarPassiveItem(new FabricItemSettings().maxCount(1)));
-
+    public static final Item PopStar = registerItem("popstar",
+            new PopStarPassiveItem(new FabricItemSettings().maxCount(1)));
+    public static final Item ScorchingStar = registerItem("scorchingstar",
+            new Item(new FabricItemSettings().maxCount(1)));
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
     }

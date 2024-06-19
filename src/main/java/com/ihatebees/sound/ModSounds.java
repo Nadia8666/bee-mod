@@ -11,6 +11,8 @@ public class ModSounds {
 
     public static final SoundEvent ITEM_SAW_SOUND = registerSoundEvent("item_saw_sound");
     public static final SoundEvent ITEM_GUMMYSTAR = registerSoundEvent("item_gummystar");
+    public static final SoundEvent ITEM_POPSTAR = registerSoundEvent("item_popstar");
+    public static final SoundEvent ITEM_SCORCHINGSTAR = registerSoundEvent("item_scorchingstar");
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(BeeMod.MODID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));

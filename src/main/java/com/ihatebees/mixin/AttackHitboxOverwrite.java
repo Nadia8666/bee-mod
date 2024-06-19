@@ -136,8 +136,8 @@ public abstract class AttackHitboxOverwrite extends LivingEntity {
                                 // maxdistance in square rooted number, 49 = 7 blocks, 9 = 3 blocks
 
                                 if (isdarkscythe) {
-                                    hitboxsizelist = new double[]{7, 7, 7};
-                                    maxdistance = 49;
+                                    hitboxsizelist = new double[]{5, 3.25f, 5};
+                                    maxdistance = 25;
                                     l = f;
                                 } else {
                                     hitboxsizelist = new double[]{1, .25, 1};

@@ -10,5 +10,17 @@
     "sounds": [
       "beemod:item_gummystar"
     ]
+  },
+  "item_popstar": {
+    "subtitle": "sounds.beemod.item_popstar",
+    "sounds": [
+      "beemod:item_popstar"
+    ]
+  },
+  "item_scorchingstar": {
+    "subtitle": "sounds.beemod.item_scorchingstar",
+    "sounds": [
+      "beemod:item_scorchingstar"
+    ]
   }
 }
