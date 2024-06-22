@@ -26,7 +26,7 @@ public class ModItems {
     public static final Item StarSaw = registerItem("starsaw",
             new StarSawSwordItem(ModToolMaterials.BITCH, 6, 16, new FabricItemSettings()));
     public static final Item DarkScythe = registerItem("darkscythe",
-            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 11,-3.5f, new FabricItemSettings()));
+            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 11,-3.5f, new FabricItemSettings().fireproof()));
     public static final Item Gummyballer = registerItem("gummyballer",
             new SwordItem(ModToolMaterials.ENDGAME, 8, -3, new FabricItemSettings()));
     public static final Item TidePopper = registerItem("tidepopper",
@@ -34,11 +34,11 @@ public class ModItems {
 
     // custom implementations
     public static final Item GummyStar = registerItem("gummystar",
-            new GummyStarPassiveItem(new FabricItemSettings().maxCount(1)));
+            new GummyStarPassiveItem(new FabricItemSettings().maxCount(1).fireproof()));
     public static final Item PopStar = registerItem("popstar",
-            new PopStarPassiveItem(new FabricItemSettings().maxCount(1)));
+            new PopStarPassiveItem(new FabricItemSettings().maxCount(1).fireproof()));
     public static final Item ScorchingStar = registerItem("scorchingstar",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new ScorchingStarPassiveItem(new FabricItemSettings().maxCount(1).fireproof()));
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
     }
