@@ -10,5 +10,53 @@
     "sounds": [
       "beemod:item_gummystar"
     ]
+  },
+  "item_popstar": {
+    "subtitle": "sounds.beemod.item_popstar",
+    "sounds": [
+      "beemod:item_popstar"
+    ]
+  },
+  "item_scorchingstar": {
+    "subtitle": "sounds.beemod.item_scorchingstar",
+    "sounds": [
+      "beemod:item_scorchingstar"
+    ]
+  },
+  "combo_start": {
+    "subtitle": "sounds.beemod.combo_start",
+    "sounds": [
+      "beemod:combostart"
+    ]
+  },
+  "combo_intro": {
+    "subtitle": "sounds.beemod.combo_intro",
+    "sounds": [
+      "beemod:combointro"
+    ]
+  },
+  "combo_end": {
+    "subtitle": "sounds.beemod.combo_end",
+    "sounds": [
+      "beemod:comboend"
+    ]
+  },
+  "gummy_start": {
+    "subtitle": "sounds.beemod.gummmy_start",
+    "sounds": [
+      "beemod:gummystart"
+    ]
+  },
+  "gummy_hit": {
+    "subtitle": "sounds.beemod.gummy_hit",
+    "sounds": [
+      "beemod:gummyhit"
+    ]
+  },
+  "gummy_end": {
+    "subtitle": "sounds.beemod.gummy_end",
+    "sounds": [
+      "beemod:gummyend"
+    ]
   }
 }

@@ -1,15 +1,20 @@
 package com.ihatebees;
 
+import com.ihatebees.entity.ModEntities;
 import com.ihatebees.item.ModItems;
 import com.ihatebees.particle.ModParticles;
 import com.ihatebees.particle.custom.StarSweepParticle;
+import com.ihatebees.particle.custom.TriangleParticle;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.entity.EntityRenderer;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.util.math.RotationAxis;
@@ -20,7 +25,8 @@ public class BeeModClient implements ClientModInitializer {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering
 
 		ParticleFactoryRegistry.getInstance().register(ModParticles.STARSWEEP_PARTICLE, StarSweepParticle.Factory::new);
-
+		ParticleFactoryRegistry.getInstance().register(ModParticles.TRIANGLE_PARTICLE, TriangleParticle.Factory::new);
+		EntityRendererRegistry.register(ModEntities.COMBO_COCONUT, FlyingItemEntityRenderer::new);
 		// trinkets
 		TrinketRendererRegistry.registerRenderer(ModItems.CoconutBelt,
 				(stack, slotReference, contextModel, matrices, vertexConsumers, light, entity, limbAngle, limbDistance, tickDelta, animationProgress, headYaw, headPitch) -> {
@@ -37,6 +43,9 @@ public class BeeModClient implements ClientModInitializer {
 						matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
 
 						MinecraftClient.getInstance().getItemRenderer().renderItem(stack, ModelTransformationMode.FIXED, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, world, 0);
+
+
+
 					}
 				});
 	}

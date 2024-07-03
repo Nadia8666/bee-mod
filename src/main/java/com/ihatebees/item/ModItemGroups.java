@@ -28,6 +28,12 @@ public class ModItemGroups {
                         entries.add(ModItems.StarSaw);
                         entries.add(ModItems.DarkScythe);
                         entries.add(ModItems.Gummyballer);
+                        entries.add(ModItems.TidePopper);
+
+                        // custom implementation
+                        entries.add(ModItems.PopStar);
+                        entries.add(ModItems.GummyStar);
+                        entries.add(ModItems.ScorchingStar);
 
                         // blocks
                         entries.add(ModBlocks.PACKHONEY);
