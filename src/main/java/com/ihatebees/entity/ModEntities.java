@@ -16,7 +16,7 @@ public class ModEntities {
     public static final EntityType<ComboProjectileEntity> COMBO_COCONUT = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(BeeMod.MODID,"combo_coconut"),
             FabricEntityTypeBuilder.<ComboProjectileEntity>create(SpawnGroup.MISC, ComboProjectileEntity::new)
-                    .dimensions(EntityDimensions.fixed(3f,3f)).build());
+                    .dimensions(EntityDimensions.fixed(10f,10f)).build());
 
 
     public static void registerModEntities() {

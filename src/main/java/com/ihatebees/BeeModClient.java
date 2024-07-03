@@ -4,6 +4,7 @@ import com.ihatebees.entity.ModEntities;
 import com.ihatebees.item.ModItems;
 import com.ihatebees.particle.ModParticles;
 import com.ihatebees.particle.custom.StarSweepParticle;
+import com.ihatebees.particle.custom.TriangleParticle;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
@@ -24,6 +25,7 @@ public class BeeModClient implements ClientModInitializer {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering
 
 		ParticleFactoryRegistry.getInstance().register(ModParticles.STARSWEEP_PARTICLE, StarSweepParticle.Factory::new);
+		ParticleFactoryRegistry.getInstance().register(ModParticles.TRIANGLE_PARTICLE, TriangleParticle.Factory::new);
 		EntityRendererRegistry.register(ModEntities.COMBO_COCONUT, FlyingItemEntityRenderer::new);
 		// trinkets
 		TrinketRendererRegistry.registerRenderer(ModItems.CoconutBelt,

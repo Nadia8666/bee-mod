@@ -5,40 +5,35 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ParticleEffect;
 
-public class StarSweepParticle extends SpriteBillboardParticle {
-    private final SpriteProvider spriteProvider;
 
-    StarSweepParticle(ClientWorld world, double x, double y, double z, double d, SpriteProvider spriteProvider) {
-        super(world, x, y, z, 0.0, 0.0, 0.0);
-        this.spriteProvider = spriteProvider;
-        this.maxAge = 5;
-      //  float f = this.random.nextFloat() * 0.6F + 0.4F;
-        this.red = 1;
-        this.green = 1;
-        this.blue = 1;
-        this.scale = 2.0F - (float)d * 0.5F;
-        this.setSpriteForAge(spriteProvider);
-    }
-
-    public int getBrightness(float tint) {
-        return 15728880;
-    }
-
-    public void tick() {
-        this.prevPosX = this.x;
-        this.prevPosY = this.y;
-        this.prevPosZ = this.z;
-        if (this.age++ >= this.maxAge) {
-            this.markDead();
-        } else {
-            this.setSpriteForAge(this.spriteProvider);
+public class TriangleParticle extends SpriteBillboardParticle {
+    TriangleParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
+        super(world, x, y, z);
+        this.velocityMultiplier = 0.91f;
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
+        this.velocityZ = velocityZ;
+        this.scale = 0.005f;
+        this.angle= this.random.nextInt(360);
+        this.maxAge = 20*6 + this.random.nextInt(40);
+        int decide = this.random.nextInt(3);
+        if (decide==2) {
+            this.setColor(1,0,0);
+        } else if (decide==1) {
+            this.setColor(0,0,1);
+        }
+        else {
+            this.setColor(1,1,1);
         }
     }
 
+    @Override
     public ParticleTextureSheet getType() {
         return ParticleTextureSheet.PARTICLE_SHEET_LIT;
-    }
+    };
+
 
     @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleFactory<DefaultParticleType> {
