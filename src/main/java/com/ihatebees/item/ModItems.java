@@ -39,6 +39,10 @@ public class ModItems {
             new PopStarPassiveItem(new FabricItemSettings().maxCount(1).fireproof()));
     public static final Item ScorchingStar = registerItem("scorchingstar",
             new ScorchingStarPassiveItem(new FabricItemSettings().maxCount(1).fireproof()));
+
+    public static final Item ComboCoconut = registerItem("combococonut",
+            new ComboCoconutItem(new FabricItemSettings().maxCount(40)));
+
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
     }

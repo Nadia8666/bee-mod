@@ -12,7 +12,7 @@ public class StarSweepParticle extends SpriteBillboardParticle {
     StarSweepParticle(ClientWorld world, double x, double y, double z, double d, SpriteProvider spriteProvider) {
         super(world, x, y, z, 0.0, 0.0, 0.0);
         this.spriteProvider = spriteProvider;
-        this.maxAge = 4;
+        this.maxAge = 5;
         float f = this.random.nextFloat() * 0.6F + 0.4F;
         this.red = f;
         this.green = f;
