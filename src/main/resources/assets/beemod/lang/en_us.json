@@ -9,12 +9,16 @@
   "item.beemod.darkscythe": "Dark Scythe",
   "item.beemod.gummyballer": "Gummyballer",
   "item.beemod.tidepopper": "Tide Popper",
-
-
+  "item.beemod.popstar": "Pop Star",
+  "item.beemod.gummystar": "Gummy Star",
+  "item.beemod.scorchingstar": "Scorching Star",
+  "item.beemod.combococonut": "Combo Coconut",
+  "item.beemod.comboblessing": "Combo Blessing",
 
   "block.beemod.packaged_honey": "Packaged Honey",
   "block.beemod.big_packaged_honey": "9x Packaged Honey",
   "block.beemod.huge_packaged_honey": "81x Packaged Honey",
   "block.beemod.extreme_packaged_honey": "729x Packaged Honey"
+
 
 }

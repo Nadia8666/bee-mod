@@ -6,24 +6,24 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.particle.ParticleEffect;
 
 
-public class TriangleParticle extends SpriteBillboardParticle {
+public class StarParticle extends SpriteBillboardParticle {
     private final SpriteProvider spriteProvider;
 
-    TriangleParticle(ClientWorld world, double x, double y, double z, double d, SpriteProvider spriteProvider) {
+    StarParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
         super(world, x, y, z);
         this.spriteProvider = spriteProvider;
-        this.velocityMultiplier = 0.91f;
-        this.gravityStrength= 0.02f;
+        this.velocityMultiplier = 0.81f+ (float) this.random.nextInt(10)/100 ;
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
+        this.velocityZ = velocityZ;
+        this.gravityStrength= 1;
         this.alpha=0.2f;
-        this.scale = 0.175f;
-        this.angle= this.random.nextInt(360);
-        this.maxAge = 20;
-        this.prevAngle = this.angle;
+        this.scale = 0.35f + (float) this.random.nextInt(20)/50;
+        this.maxAge = 35 + this.random.nextInt(40);
         int decide = this.random.nextInt(3);
-        BeeMod.LOGGER.info(String.valueOf(decide));
+     //   BeeMod.LOGGER.info(String.valueOf(decide));
         if (decide==2) {
             this.setColor(1,0,0);
         } else if (decide==1) {
@@ -34,6 +34,9 @@ public class TriangleParticle extends SpriteBillboardParticle {
         }
         this.setSpriteForAge(spriteProvider);
     }
+
+
+
 
     @Override
     public ParticleTextureSheet getType() {
@@ -50,7 +53,7 @@ public class TriangleParticle extends SpriteBillboardParticle {
         }
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new TriangleParticle(clientWorld, d, e, f, g, this.spriteProvider);
+            return new StarParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider);
         }
     }
 }

@@ -12,11 +12,15 @@ import net.minecraft.client.particle.SpriteProvider;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.BlazeEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
+import net.minecraft.potion.Potions;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
@@ -40,7 +44,16 @@ public class ComboProjectileEntity extends ThrownItemEntity {
     public Packet<ClientPlayPacketListener> createSpawnPacket() {
         return new EntitySpawnS2CPacket(this);
     }
+    @Override
+    public void tick() {
+        super.tick();
 
+        this.getWorld().addParticle(ModParticles.TRIANGLE_PARTICLE,
+                this.getX()+(3*random.nextFloat()-1.5),
+                this.getY()+(3*random.nextFloat()-1.5),
+                this.getZ()+(3*random.nextFloat()-1.5),
+                0,0,0);
+    }
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
@@ -53,22 +66,32 @@ public class ComboProjectileEntity extends ThrownItemEntity {
       //  BeeMod.LOGGER.info(String.valueOf(dmg));
       //  BeeMod.LOGGER.info("Calculations completed");
         combo+=1;
-        entity.damage(this.getDamageSources().thrown(this, this.getOwner()), (float) dmg);
+        int k = entity instanceof PlayerEntity ? 1 : 0;
+        if (k==1) {
+
+
+        } else {
+            entity.damage(this.getDamageSources().thrown(this, this.getOwner()), (float) dmg);
+        }
     }
 
     @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
+
+        int Deg = 15-combo;
+        for (float i = 0; ((float) 360 /Deg)>i; i++) {
+            BeeMod.LOGGER.info("Attemption spawn particle");
+            BeeMod.LOGGER.info(String.valueOf(i*Deg));
+            this.getWorld().addParticle(ModParticles.STAR_PARTICLE, this.getX(), this.getY(), this.getZ(),
+                    Math.cos(i*Deg) * this.random.nextInt(combo+2), this.random.nextInt(combo+2), Math.sin(i*Deg) * this.random.nextInt(combo+2));
+        }
+
         if (!this.getWorld().isClient()) {
             this.getWorld().sendEntityStatus(this,(byte)3);
         }
         this.getWorld().playSound(null, this.getX(), this.getY(), this.getZ(), ModSounds.COMBO_END, SoundCategory.NEUTRAL, 12f, 1f);
-        int Deg = 12;
-        for (float i = 0; ((float) 360 /Deg)>i; i++) {
-            BeeMod.LOGGER.info("Attemption spawn particle");
-            BeeMod.LOGGER.info(String.valueOf(i*Deg));
-            this.getWorld().addParticle(ModParticles.TRIANGLE_PARTICLE, this.getX(), this.getY(), this.getZ(),
-                    Math.cos(i*Deg) * 20d, 20d, Math.sin(i*Deg) * 20d);
-        }
+
+
         this.discard();
         super.onBlockHit(blockHitResult);
     }

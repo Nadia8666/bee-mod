@@ -42,6 +42,9 @@ public class ModItems {
 
     public static final Item ComboCoconut = registerItem("combococonut",
             new ComboCoconutItem(new FabricItemSettings().maxCount(40)));
+    public static final Item ComboBlessing = registerItem("comboblessing",
+            new Item(new FabricItemSettings().maxCount(40)));
+
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);

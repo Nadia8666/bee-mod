@@ -31,5 +31,6 @@ public class ModModelProvider extends FabricModelProvider {
 
 
         itemModelGenerator.register(ModItems.ComboCoconut,Models.GENERATED);
+        itemModelGenerator.register(ModItems.ComboBlessing,Models.GENERATED);
     }
 }

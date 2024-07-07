@@ -3,6 +3,7 @@ package com.ihatebees.mixin;
 import com.ihatebees.BeeMod;
 import com.ihatebees.item.custom.DarkScytheSwordItem;
 import com.ihatebees.item.custom.StarSawSwordItem;
+import com.ihatebees.sound.ModSounds;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.authlib.GameProfile;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -157,9 +158,14 @@ public abstract class AttackHitboxOverwrite extends LivingEntity {
                                             do {
                                                 do {
                                                     if (!var19.hasNext()) {
-                                                        this.getWorld().playSound((PlayerEntity)null, this.getX(), this.getY(), this.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, this.getSoundCategory(), 1.0F, 1.0F);
-                                                        ((PlayerEntity)(Object)this).spawnSweepAttackParticles();
+                                                        if (isdarkscythe) {
+                                                            this.getWorld().playSound((PlayerEntity)null, this.getX(), this.getY(), this.getZ(), ModSounds.EVENT_FLAME, this.getSoundCategory(), 1.0F, 1.0F);
+                                                        } else {
+                                                            this.getWorld().playSound((PlayerEntity) null, this.getX(), this.getY(), this.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, this.getSoundCategory(), 1.0F, 1.0F);
+                                                        }
+                                                        ((PlayerEntity) (Object) this).spawnSweepAttackParticles();
                                                         break label166;
+
                                                     }
 
                                                     livingEntity = (LivingEntity)var19.next();

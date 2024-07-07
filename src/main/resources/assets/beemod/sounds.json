@@ -26,7 +26,10 @@
   "combo_start": {
     "subtitle": "sounds.beemod.combo_start",
     "sounds": [
-      "beemod:combostart"
+      "beemod:combostart",
+      "beemod:bass_2",
+      "beemod:bass_3",
+      "beemod:bass_4"
     ]
   },
   "combo_intro": {
@@ -57,6 +60,18 @@
     "subtitle": "sounds.beemod.gummy_end",
     "sounds": [
       "beemod:gummyend"
+    ]
+  },
+  "event_flame": {
+    "subtitle": "sounds.beemod.event_flame",
+    "sounds": [
+      "beemod:event_flame"
+    ]
+  },
+  "event_inferno": {
+    "subtitle": "sounds.beemod.event_inferno",
+    "sounds": [
+      "beemod:event_inferno"
     ]
   }
 }
