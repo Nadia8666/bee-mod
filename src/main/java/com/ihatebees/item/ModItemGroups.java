@@ -47,6 +47,10 @@ public class ModItemGroups {
                         entries.add(ModItems.TestHat);
                         entries.add(ModItems.CoconutCanister);
 
+                        entries.add(ModItems.HardHat);
+                        entries.add(ModItems.Blue_Port_O_Hive);
+                        entries.add(ModItems.BasicBoots);
+
 
                     }).build());
     public static void registerItemGroups() {

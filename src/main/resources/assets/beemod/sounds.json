@@ -35,13 +35,16 @@
   "combo_intro": {
     "subtitle": "sounds.beemod.combo_intro",
     "sounds": [
-      "beemod:combointro"
+      "beemod:combo_player"
     ]
   },
   "combo_end": {
     "subtitle": "sounds.beemod.combo_end",
     "sounds": [
-      "beemod:comboend"
+      "beemod:comboend",
+      "beemod:combo_2",
+      "beemod:combo_3",
+      "beemod:combo_4"
     ]
   },
   "gummy_start": {

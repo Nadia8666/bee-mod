@@ -10,7 +10,6 @@ import net.minecraft.particle.DefaultParticleType;
 
 public class StarParticle extends SpriteBillboardParticle {
     private final SpriteProvider spriteProvider;
-
     StarParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
         super(world, x, y, z);
         this.spriteProvider = spriteProvider;

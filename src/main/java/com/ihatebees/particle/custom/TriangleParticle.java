@@ -18,7 +18,7 @@ public class TriangleParticle extends SpriteBillboardParticle {
         this.velocityMultiplier = 0.91f;
         this.gravityStrength= 0.02f;
         this.alpha=0.2f;
-        this.scale = 0.175f;
+        this.scale = 0.2125f;
         this.angle= this.random.nextInt(360);
         this.maxAge = 20;
         this.prevAngle = this.angle;

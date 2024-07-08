@@ -24,7 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CoconutCanister, Models.GENERATED);
         itemModelGenerator.register(ModItems.TestHat, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.StarSaw, Models.HANDHELD);
+       // itemModelGenerator.register(ModItems.StarSaw, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ScorchingStar,Models.HANDHELD);
         itemModelGenerator.register(ModItems.PopStar, Models.HANDHELD);
         //  itemModelGenerator.register(ModItems.DarkScythe, Models.HANDHELD);
@@ -32,5 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.ComboCoconut,Models.GENERATED);
         itemModelGenerator.register(ModItems.ComboBlessing,Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.gummyball,Models.GENERATED);
     }
 }

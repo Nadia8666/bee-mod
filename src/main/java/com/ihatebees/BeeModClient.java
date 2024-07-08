@@ -29,6 +29,7 @@ public class BeeModClient implements ClientModInitializer {
 		ParticleFactoryRegistry.getInstance().register(ModParticles.TRIANGLE_PARTICLE, TriangleParticle.Factory::new);
 		ParticleFactoryRegistry.getInstance().register(ModParticles.STAR_PARTICLE, StarParticle.Factory::new);
 		EntityRendererRegistry.register(ModEntities.COMBO_COCONUT, FlyingItemEntityRenderer::new);
+		EntityRendererRegistry.register(ModEntities.GUMMY_BALL, FlyingItemEntityRenderer::new);
 		// trinkets
 		TrinketRendererRegistry.registerRenderer(ModItems.CoconutBelt,
 				(stack, slotReference, contextModel, matrices, vertexConsumers, light, entity, limbAngle, limbDistance, tickDelta, animationProgress, headYaw, headPitch) -> {

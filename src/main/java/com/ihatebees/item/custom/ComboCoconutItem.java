@@ -34,7 +34,7 @@ public class ComboCoconutItem extends Item {
         if (!world.isClient) {
             ComboProjectileEntity comboProjectileEntity = new ComboProjectileEntity(user, world);
             comboProjectileEntity.setItem(itemStack);
-            comboProjectileEntity.setVelocity(user,  -(90*((float) 1 /4)) + user.getPitch()*((float) 3/4), user.getYaw(), 0.0f, 0.65f, 0.2f);
+            comboProjectileEntity.setVelocity(user,  -(90*((float) 1 /4)) + user.getPitch()*((float) 3/4), user.getYaw(), 0.0f, 0.85f, 0.35f);
             world.spawnEntity(comboProjectileEntity);
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));
