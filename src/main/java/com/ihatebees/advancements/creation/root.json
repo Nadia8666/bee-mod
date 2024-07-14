@@ -1,0 +1,28 @@
+{
+    "display": {
+        "title": {
+            "text": "Welcome to Beemod"
+        },
+        "description": {
+            "text": "A world of sweet pain"
+        },
+        "icon": {
+            "item": "minecraft:honey_bottle"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "beemod:textures/gui/bg.png"
+    },
+    "criteria": {
+        "playerjoined":  {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+        "playerjoined"
+        ]
+    ]
+}

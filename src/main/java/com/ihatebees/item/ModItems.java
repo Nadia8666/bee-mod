@@ -9,6 +9,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     // test armor
@@ -33,11 +34,11 @@ public class ModItems {
     public static final Item StarSaw = registerItem("starsaw",
             new StarSawSwordItem(ModToolMaterials.BITCH, 6, 16, new FabricItemSettings()));
     public static final Item DarkScythe = registerItem("darkscythe",
-            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 11,-3.5f, new FabricItemSettings().fireproof()));
+            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 9,-3.5f, new FabricItemSettings().fireproof()));
     public static final Item Gummyballer = registerItem("gummyballer",
-            new GummyballerSwordItem(ModToolMaterials.ENDGAME, 8, -3, new FabricItemSettings()));
+            new GummyballerSwordItem(ModToolMaterials.ENDGAME, 6, -3, new FabricItemSettings()));
     public static final Item TidePopper = registerItem("tidepopper",
-            new SwordItem(ModToolMaterials.ENDGAME, 7,-2.7f, new FabricItemSettings()));
+            new SwordItem(ModToolMaterials.ENDGAME, 7,-2.5f, new FabricItemSettings()));
 
     // custom implementations
     public static final Item GummyStar = registerItem("gummystar",
@@ -51,7 +52,8 @@ public class ModItems {
             new ComboCoconutItem(new FabricItemSettings().maxCount(40)));
     public static final Item ComboBlessing = registerItem("comboblessing",
             new Item(new FabricItemSettings().maxCount(40)));
-
+    public static final Item Turpentine = registerItem("turpentine",
+            new MilkBucketItem(new FabricItemSettings().maxCount(25)));
 
 
     // dont exist
