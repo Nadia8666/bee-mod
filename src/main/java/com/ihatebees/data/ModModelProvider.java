@@ -29,7 +29,6 @@ public class ModModelProvider extends FabricModelProvider {
        // itemModelGenerator.register(ModItems.StarSaw, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ScorchingStar,Models.HANDHELD);
         itemModelGenerator.register(ModItems.PopStar, Models.HANDHELD);
-
         //  itemModelGenerator.register(ModItems.DarkScythe, Models.HANDHELD);
 
 
