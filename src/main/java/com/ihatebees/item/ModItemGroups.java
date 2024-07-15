@@ -16,24 +16,46 @@ public class ModItemGroups {
             new Identifier(BeeMod.MODID, "beeitems"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.beeitems"))
                     .icon(() -> new ItemStack(ModItems.TestThing)).entries((displayContext, entries) -> {
-                        // items
-                        entries.add(ModItems.TestThing);
-
-                        // armor
-                        entries.add(ModItems.CoconutBelt);
-                        entries.add(ModItems.TestHat);
-                        entries.add(ModItems.CoconutCanister);
-
-                        // weapons
-                        entries.add(ModItems.StarSaw);
-                        entries.add(ModItems.DarkScythe);
-                        entries.add(ModItems.Gummyballer);
 
                         // blocks
                         entries.add(ModBlocks.PACKHONEY);
                         entries.add(ModBlocks.BIG_PACKHONEY);
                         entries.add(ModBlocks.HUGE_PACKHONEY);
                         entries.add(ModBlocks.EXTREME_PACKHONEY);
+
+
+                        //machine
+
+
+                        // armor
+                        entries.add(ModItems.CoconutBelt);
+                        entries.add(ModItems.TestHat);
+                        entries.add(ModItems.CoconutCanister);
+
+                        entries.add(ModItems.HardHat);
+                        entries.add(ModItems.Blue_Port_O_Hive);
+                        entries.add(ModItems.BasicBoots);
+                        // weapons
+                        entries.add(ModItems.StarShower);
+                        entries.add(ModItems.StarSaw);
+                        entries.add(ModItems.DarkScythe);
+                        entries.add(ModItems.Gummyballer);
+                        entries.add(ModItems.TidePopper);
+                        entries.add(ModItems.ComboCoconut);
+
+                        // passive/buff
+                        entries.add(ModItems.ComboBlessing);
+                        entries.add(ModItems.PopStar);
+                        entries.add(ModItems.GummyStar);
+                        entries.add(ModItems.ScorchingStar);
+
+                        // items
+
+                        entries.add(ModItems.TestThing);
+                        entries.add(ModItems.Turpentine);
+
+
+                        // do not add gummy_ball / showstar or any other item under not real or wtf i called it
                     }).build());
     public static void registerItemGroups() {
         BeeMod.LOGGER.info("Registering Item Groups for " + BeeMod.MODID);

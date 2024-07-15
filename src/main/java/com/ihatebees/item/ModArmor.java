@@ -11,8 +11,16 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmor implements ArmorMaterial {
+
+
     GENERIC_ARMOR("generic_armor", 25, new int[] { 3, 8, 6, 3 }, 19,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2f, 0.1f, () -> Ingredient.ofItems(ModItems.TestThing));
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2f, 0.1f, () -> Ingredient.ofItems(ModItems.TestThing)),
+    BASIC_ARMOR("basic_armor", 15, new int[] { 3, 4, 0, 2 }, 4,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 0f, 0f, () -> Ingredient.ofItems(ModItems.TestThing)),
+
+    ;
+
+
 
     private final String name;
     private final int durabilityMultiplier;

@@ -1,0 +1,29 @@
+{
+    "display": {
+
+
+        "icon": {
+            "item": "minecraft:stone_shovel"
+        },
+        "text": "First of Many",
+        "description": "Craft a shovel",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "beemod:creation/root",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bedrock"
+                    }
+                ]
+            }
+        }
+    },
+
+}

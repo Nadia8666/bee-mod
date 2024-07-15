@@ -4,7 +4,11 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
+import net.minecraft.item.ItemStack;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ItemStackParticleEffect;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 
 public class StarSweepParticle extends SpriteBillboardParticle {
     private final SpriteProvider spriteProvider;
@@ -12,11 +16,11 @@ public class StarSweepParticle extends SpriteBillboardParticle {
     StarSweepParticle(ClientWorld world, double x, double y, double z, double d, SpriteProvider spriteProvider) {
         super(world, x, y, z, 0.0, 0.0, 0.0);
         this.spriteProvider = spriteProvider;
-        this.maxAge = 4;
-        float f = this.random.nextFloat() * 0.6F + 0.4F;
-        this.red = f;
-        this.green = f;
-        this.blue = f;
+        this.maxAge = 6;
+      //  float f = this.random.nextFloat() * 0.6F + 0.4F;
+        this.red = 1;
+        this.green = 1;
+        this.blue = 1;
         this.scale = 2.0F - (float)d * 0.5F;
         this.setSpriteForAge(spriteProvider);
     }
