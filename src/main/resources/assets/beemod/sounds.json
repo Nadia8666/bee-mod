@@ -2,7 +2,10 @@
   "item_saw_sound": {
    "subtitle": "sounds.beemod.item_saw_sound",
     "sounds": [
-      "beemod:item_saw_sound"
+      "beemod:saw_1",
+      "beemod:saw_2",
+      "beemod:saw_3",
+      "beemod:saw_3"
     ]
   },
   "item_gummystar": {
@@ -75,6 +78,18 @@
     "subtitle": "sounds.beemod.event_inferno",
     "sounds": [
       "beemod:event_inferno"
+    ]
+  },
+  "event_shower": {
+    "subtitle": "sounds.beemod.event_shower",
+    "sounds": [
+      "beemod:starshower"
+    ]
+  },
+  "event_item": {
+    "subtitle": "sounds.beemod.event_item",
+    "sounds": [
+      "beemod:event_item"
     ]
   }
 }

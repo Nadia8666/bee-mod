@@ -37,6 +37,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ComboBlessing,Models.GENERATED);
 
         itemModelGenerator.register(ModItems.gummyball,Models.GENERATED);
+        itemModelGenerator.register(ModItems.showstar,Models.GENERATED);
         itemModelGenerator.register(ModItems.Turpentine, Models.GENERATED);
     }
 }

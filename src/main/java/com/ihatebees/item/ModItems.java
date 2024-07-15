@@ -51,15 +51,18 @@ public class ModItems {
     public static final Item ComboCoconut = registerItem("combococonut",
             new ComboCoconutItem(new FabricItemSettings().maxCount(40)));
     public static final Item ComboBlessing = registerItem("comboblessing",
-            new Item(new FabricItemSettings().maxCount(40)));
+            new CBlessingItem(new FabricItemSettings().maxCount(40)));
     public static final Item Turpentine = registerItem("turpentine",
             new MilkBucketItem(new FabricItemSettings().maxCount(25)));
+    public static final Item StarShower = registerItem("starshower",
+            new StarShowerItem(new FabricItemSettings().maxCount(1).maxDamage(41)));
 
 
     // dont exist
     public static final Item gummyball = registerItem("gummyball",
             new Item(new FabricItemSettings().maxCount(1)));
-
+    public static final Item showstar = registerItem("showstar",
+            new Item(new FabricItemSettings().maxCount(1)));
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(TestThing);
     }

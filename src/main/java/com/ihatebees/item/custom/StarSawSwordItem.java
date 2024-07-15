@@ -34,20 +34,9 @@ public class StarSawSwordItem extends SwordItem implements GeoItem {
     }
 
 
-    @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        attacker.getWorld().playSound((PlayerEntity) null, attacker.getX(),attacker.getY(),attacker.getZ(), ModSounds.ITEM_SAW_SOUND, SoundCategory.BLOCKS, 1.0F, 1.0F);
-       return super.postHit(stack,target,attacker);
-    }
-
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    //   @Override
-    // public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-    //      attacker.getWorld().playSound((PlayerEntity) null, attacker.getX(),attacker.getY(),attacker.getZ(), ModSounds.ITEM_SAW_SOUND, SoundCategory.BLOCKS, 1.0F, 1.0F);
-    //     return super.postHit(stack,target,attacker);
-    //  }
 
     @Override
     public void createRenderer(Consumer<Object> consumer) {

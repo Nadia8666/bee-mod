@@ -159,7 +159,9 @@ public abstract class AttackHitboxOverwrite extends LivingEntity {
                                                 do {
                                                     if (!var19.hasNext()) {
                                                         if (isdarkscythe) {
-                                                            this.getWorld().playSound((PlayerEntity)null, this.getX(), this.getY(), this.getZ(), ModSounds.EVENT_FLAME, this.getSoundCategory(), 1.0F, 1.0F);
+                                                            this.getWorld().playSound((PlayerEntity) null, this.getX(), this.getY(), this.getZ(), ModSounds.EVENT_FLAME, this.getSoundCategory(), 1.0F, 1.0F);
+                                                        } else if (isstarsaw) {
+                                                            this.getWorld().playSound((PlayerEntity) null, this.getX(), this.getY(), this.getZ(), ModSounds.ITEM_SAW_SOUND, this.getSoundCategory(), 1.0F, 1.0F);
                                                         } else {
                                                             this.getWorld().playSound((PlayerEntity) null, this.getX(), this.getY(), this.getZ(), SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, this.getSoundCategory(), 1.0F, 1.0F);
                                                         }

@@ -26,10 +26,17 @@ public class ModItemGroups {
 
                         //machine
 
-                        // items
-                        entries.add(ModItems.TestThing);
 
+                        // armor
+                        entries.add(ModItems.CoconutBelt);
+                        entries.add(ModItems.TestHat);
+                        entries.add(ModItems.CoconutCanister);
+
+                        entries.add(ModItems.HardHat);
+                        entries.add(ModItems.Blue_Port_O_Hive);
+                        entries.add(ModItems.BasicBoots);
                         // weapons
+                        entries.add(ModItems.StarShower);
                         entries.add(ModItems.StarSaw);
                         entries.add(ModItems.DarkScythe);
                         entries.add(ModItems.Gummyballer);
@@ -42,16 +49,13 @@ public class ModItemGroups {
                         entries.add(ModItems.GummyStar);
                         entries.add(ModItems.ScorchingStar);
 
-                        // armor
-                        entries.add(ModItems.CoconutBelt);
-                        entries.add(ModItems.TestHat);
-                        entries.add(ModItems.CoconutCanister);
+                        // items
 
-                        entries.add(ModItems.HardHat);
-                        entries.add(ModItems.Blue_Port_O_Hive);
-                        entries.add(ModItems.BasicBoots);
+                        entries.add(ModItems.TestThing);
+                        entries.add(ModItems.Turpentine);
 
 
+                        // do not add gummy_ball / showstar or any other item under not real or wtf i called it
                     }).build());
     public static void registerItemGroups() {
         BeeMod.LOGGER.info("Registering Item Groups for " + BeeMod.MODID);
