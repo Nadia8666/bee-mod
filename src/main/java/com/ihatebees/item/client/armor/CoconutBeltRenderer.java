@@ -1,4 +1,4 @@
-package com.ihatebees.item.client;
+package com.ihatebees.item.client.armor;
 
 import com.ihatebees.BeeMod;
 import com.ihatebees.item.custom.CoconutBeltTrinketItem;

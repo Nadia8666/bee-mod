@@ -9,19 +9,31 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 
 public class ModItems {
     // test armor
     public static final Item TestThing = registerItem("testthing", new Item(new FabricItemSettings()));
     public static final Item TestHat = registerItem("testhat",
-            new TestHatArmorItem(ModArmor.GENERIC_ARMOR, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new TestHatArmorItem(ModArmor.MASTER_ARMOR, ArmorItem.Type.HELMET, new FabricItemSettings()));
 
     // custom armor
     public static final Item CoconutBelt = registerItem("coconutbelt",
             new CoconutBeltTrinketItem(new FabricItemSettings().maxCount(1)));
+
+    public static final Item DemonMask = registerItem("demon_mask",
+            new MasterArmorItem(ModArmor.MASTER_ARMOR, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item CoconutCanister = registerItem("coconutcanister",
-            new CoconutCanisterArmorItem(ModArmor.GENERIC_ARMOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+            new MasterArmorItem(ModArmor.MASTER_ARMOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item GummyBoots = registerItem("gummy_boots",
+            new MasterArmorItem(ModArmor.MASTER_ARMOR, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item BeekeepersHat = registerItem("beekeepers_hat",
+            new AdvancedArmorItem(ModArmor.ADVANCED_ARMOR, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item Porcelain_Port_O_Hive = registerItem("porcelain_port_o_hive",
+            new AdvancedArmorItem(ModArmor.ADVANCED_ARMOR, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item BeekeepersBoots = registerItem("beekeepers_boots",
+            new AdvancedArmorItem(ModArmor.ADVANCED_ARMOR, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
 
     public static final Item HardHat = registerItem("hardhat",
             new BasicArmorItem(ModArmor.BASIC_ARMOR, ArmorItem.Type.HELMET, new FabricItemSettings()));

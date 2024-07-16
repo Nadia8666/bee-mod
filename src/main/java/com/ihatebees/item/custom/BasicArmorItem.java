@@ -1,6 +1,6 @@
 package com.ihatebees.item.custom;
 
-import com.ihatebees.item.client.BasicArmorRenderer;
+import com.ihatebees.item.client.armor.BasicArmorRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;

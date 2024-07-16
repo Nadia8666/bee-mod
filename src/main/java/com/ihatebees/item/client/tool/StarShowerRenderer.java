@@ -1,6 +1,5 @@
-package com.ihatebees.item.client;
+package com.ihatebees.item.client.tool;
 
-import com.ihatebees.item.custom.StarSawSwordItem;
 import com.ihatebees.item.custom.StarShowerItem;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 

@@ -1,6 +1,6 @@
 package com.ihatebees.item.custom;
 
-import com.ihatebees.item.client.CoconutCanisterRenderer;
+import com.ihatebees.item.client.armor.AdvancedArmorRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -21,10 +21,10 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class CoconutCanisterArmorItem extends ArmorItem implements GeoItem {
+public class AdvancedArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public CoconutCanisterArmorItem(ArmorMaterial armorMaterial, Type type, Settings properties) {
+    public AdvancedArmorItem(ArmorMaterial armorMaterial, Type type, Settings properties) {
         super(armorMaterial, type, properties);
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
@@ -40,7 +40,7 @@ public class CoconutCanisterArmorItem extends ArmorItem implements GeoItem {
             public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                         EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original) {
                 if (this.renderer == null)
-                    this.renderer = new CoconutCanisterRenderer();
+                    this.renderer = new AdvancedArmorRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
 

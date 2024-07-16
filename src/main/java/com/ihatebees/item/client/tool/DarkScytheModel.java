@@ -1,7 +1,6 @@
-package com.ihatebees.item.client;
+package com.ihatebees.item.client.tool;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.CoconutCanisterArmorItem;
 import com.ihatebees.item.custom.DarkScytheSwordItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.GeoModel;

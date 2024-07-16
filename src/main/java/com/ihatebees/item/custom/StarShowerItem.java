@@ -1,15 +1,11 @@
 package com.ihatebees.item.custom;
 
-import com.ihatebees.entity.custom.ComboProjectileEntity;
-
 import com.ihatebees.entity.custom.StarShowerEntity;
-import com.ihatebees.item.client.StarSawRenderer;
-import com.ihatebees.item.client.StarShowerRenderer;
+import com.ihatebees.item.client.tool.StarShowerRenderer;
 import com.ihatebees.sound.ModSounds;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ElytraItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
@@ -59,7 +55,7 @@ public class StarShowerItem extends Item implements GeoItem {
         if (isUsable(user.getStackInHand(hand))) {
             ItemStack itemStack = user.getStackInHand(hand);
             world.playSound(null, user.getX(), user.getY(), user.getZ(), ModSounds.EVENT_SHOWER, SoundCategory.NEUTRAL, 0.5f, 1f);
-            user.getItemCooldownManager().set(this, 4);
+            user.getItemCooldownManager().set(this, 2);
             if (!world.isClient) {
                 StarShowerEntity comboProjectileEntity = new StarShowerEntity(user, world);
                 comboProjectileEntity.setItem(itemStack);

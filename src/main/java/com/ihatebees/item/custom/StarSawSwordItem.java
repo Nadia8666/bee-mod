@@ -1,28 +1,14 @@
 package com.ihatebees.item.custom;
 
-import com.ihatebees.item.client.StarSawRenderer;
-import com.ihatebees.sound.ModSounds;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
+import com.ihatebees.item.client.tool.StarSawRenderer;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
-import net.minecraft.client.sound.Sound;
-import net.minecraft.client.sound.SoundExecutor;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.world.World;
 import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
 import software.bernie.geckolib.animatable.client.RenderProvider;
-import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.renderer.GeoArmorRenderer;
-import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.util.RenderUtils;
 
 import java.util.function.Consumer;
