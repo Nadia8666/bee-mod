@@ -1,11 +1,19 @@
-// 1.20.4	2024-07-15T15:32:09.8834547	bee mod/Model Definitions
-cbfd91abd6d508bd50bcebada192e904024284d7 assets\beemod\models\item\combococonut.json
+// 1.20.4	2024-07-16T17:25:18.2700649	bee mod/Model Definitions
 bc4cacf0156cad5f01a49672675c064b62207114 assets\beemod\models\item\turpentine.json
+abd47313c92fd0c118096dc60c38683954b2a79f assets\beemod\models\item\basicboots.json
+2321d8adb9726de213f671b3c60c0be3ee3ba97a assets\beemod\models\item\popstar.json
+46efc89ed02e09996a9f912b081b1fa9a6243771 assets\beemod\models\item\beekeeping_pants.json
+4f24a29632a6e4175c40a4e56104d1e0e5514069 assets\beemod\models\item\porcelain_port_o_hive.json
+9477e0bd78a9e3e3e4ea8958e208b958cf95a9f4 assets\beemod\models\item\showstar.json
+85022a44485729552cb254e257d87fb086a08ca4 assets\beemod\models\item\demon_mask.json
+3707569f6dce5f7da61b1c32facb915a937df423 assets\beemod\models\item\scorchingstar.json
+cbfd91abd6d508bd50bcebada192e904024284d7 assets\beemod\models\item\combococonut.json
 3240c4166186753979b8d8fc503961e5f578bc3b assets\beemod\models\item\coconutcanister.json
 7997f1c636b22f2532be85c6ce3335208616aa3b assets\beemod\models\item\comboblessing.json
+11dedc9442f8c4dbfb908deaf89fc092d0b16153 assets\beemod\models\item\gummy_boots.json
 634904a11e1d1d7365fac7740f686faf5f14d8b2 assets\beemod\models\item\gummyball.json
-2321d8adb9726de213f671b3c60c0be3ee3ba97a assets\beemod\models\item\popstar.json
+2e81ee1496b2ee3dda81092ce3e28e3a8721fe46 assets\beemod\models\item\hardhat.json
+b00142991f15a431c74c71152d7ceae6ad897532 assets\beemod\models\item\blue_port_o_hive.json
+6c4e89e0ec5e05b24f59b42777072e494f91b9f6 assets\beemod\models\item\beekeepers_boots.json
 2497770211328fd557742375a5cf29e6ebcd835e assets\beemod\models\item\testhat.json
-9477e0bd78a9e3e3e4ea8958e208b958cf95a9f4 assets\beemod\models\item\showstar.json
-3707569f6dce5f7da61b1c32facb915a937df423 assets\beemod\models\item\scorchingstar.json
-
+733ad629d353fec120ec9a8ee1eec661c69b58d4 assets\beemod\models\item\beekeepers_hat.json

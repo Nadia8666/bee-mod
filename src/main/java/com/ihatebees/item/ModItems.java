@@ -24,6 +24,8 @@ public class ModItems {
     // custom armor
     public static final Item CoconutBelt = registerItem("coconutbelt",
             new CoconutBeltTrinketItem(new FabricItemSettings().maxCount(1)));
+    public static final Item HoneyBelt = registerItem("honeybelt",
+            new HoneyBeltTrinketItem(new FabricItemSettings().maxCount(1)));
 
     public static final Item DemonMask = registerItem("demon_mask",
             new MasterArmorItem(ModArmor.MASTER_ARMOR, ArmorItem.Type.HELMET, new FabricItemSettings()));

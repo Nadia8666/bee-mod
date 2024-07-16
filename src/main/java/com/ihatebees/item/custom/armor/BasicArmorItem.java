@@ -45,6 +45,8 @@ public class BasicArmorItem extends ArmorItem implements GeoItem {
                 builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.randomUUID(), "Armor", 2, EntityAttributeModifier.Operation.ADDITION));
                 builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID.randomUUID(), "Armor toughness", 1, EntityAttributeModifier.Operation.ADDITION));
                 builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(UUID.randomUUID(), "Movement Speed", .1, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        } else if (this.getSlotType()==EquipmentSlot.LEGS)  {
+            builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.randomUUID(),"Armor",2, EntityAttributeModifier.Operation.ADDITION));
             }
         this.attributeModifiers = builder.build();
         SingletonGeoAnimatable.registerSyncedAnimatable(this);

@@ -45,8 +45,11 @@ public class ModItemGroups {
                         entries.add(ModItems.CoconutCanister);
                         entries.add(ModItems.GummyBoots);
 
+
                         entries.add(ModItems.CoconutBelt);
 
+
+                        entries.add(ModItems.BeekeepingPants);
                         // weapons
                         entries.add(ModItems.StarShower);
                         entries.add(ModItems.StarSaw);

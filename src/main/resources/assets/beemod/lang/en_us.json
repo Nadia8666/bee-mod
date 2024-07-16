@@ -1,10 +1,9 @@
 {
-  "itemgroup.beeitems": "Bee Mod Items",
+  "itemgroup.beeitems": "Beemod",
 
   "item.beemod.testthing": "Test Thing",
   "item.beemod.testhat": "Test Hat",
-  "item.beemod.coconutbelt": "Coconut Belt",
-  "item.beemod.coconutcanister": "Coconut Canister",
+
   "item.beemod.starsaw": "Star Saw",
   "item.beemod.darkscythe": "Dark Scythe",
   "item.beemod.gummyballer": "Gummyballer",
@@ -16,6 +15,19 @@
   "item.beemod.comboblessing": "Combo Blessing",
   "item.beemod.turpentine": "Turpentine",
   "item.beemod.starshower": "Star Shower",
+
+  "item.beemod.basicboots": "Basic Boots",
+  "item.beemod.beekeepers_boots": "Beekeeper's Boots",
+  "item.beemod.gummy_boots": "Gummy Boots",
+  "item.beemod.blue_port_o_Hive": "Blue Port-O-Hive",
+  "item.beemod.porcelain_port_o_hive": "Porcelain Port-O-Hive",
+  "item.beemod.coconutcanister": "Coconut Canister",
+  "item.beemod.hardhat": "Hard Hat",
+  "item.beemod.beekeepers_hat": "Beekeeper's Mask",
+  "item.beemod.demon_mask": "Demon Mask",
+
+  "item.beemod.coconutbelt": "Coconut Belt",
+  "item.beemod.beekeeping_pants": "Beekeeping Pants",
 
   "block.beemod.packaged_honey": "Packaged Honey",
   "block.beemod.big_packaged_honey": "9x Packaged Honey",

@@ -21,7 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         //   itemModelGenerator.register(ModItems.CoconutBelt, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CoconutCanister, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.TestHat, Models.GENERATED);
 
 
@@ -38,5 +38,19 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.gummyball,Models.GENERATED);
         itemModelGenerator.register(ModItems.showstar,Models.GENERATED);
         itemModelGenerator.register(ModItems.Turpentine, Models.GENERATED);
+
+
+
+        //armor
+        itemModelGenerator.register(ModItems.DemonMask,Models.GENERATED);
+        itemModelGenerator.register(ModItems.BeekeepersBoots,Models.GENERATED);
+        itemModelGenerator.register(ModItems.Blue_Port_O_Hive,Models.GENERATED);
+        itemModelGenerator.register(ModItems.CoconutCanister, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GummyBoots,Models.GENERATED);
+        itemModelGenerator.register(ModItems.BeekeepingPants,Models.GENERATED);
+        itemModelGenerator.register(ModItems.Porcelain_Port_O_Hive,Models.GENERATED);
+        itemModelGenerator.register(ModItems.HardHat, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BeekeepersHat,Models.GENERATED);
+        itemModelGenerator.register(ModItems.BasicBoots,Models.GENERATED);
     }
 }
