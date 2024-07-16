@@ -31,9 +31,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TestHat);
 
 
-                        entries.add(ModItems.DemonMask);
-                        entries.add(ModItems.CoconutCanister);
-                        entries.add(ModItems.GummyBoots);
+
 
                         entries.add(ModItems.HardHat);
                         entries.add(ModItems.Blue_Port_O_Hive);
@@ -42,6 +40,10 @@ public class ModItemGroups {
                         entries.add(ModItems.BeekeepersHat);
                         entries.add(ModItems.Porcelain_Port_O_Hive);
                         entries.add(ModItems.BeekeepersBoots);
+
+                        entries.add(ModItems.DemonMask);
+                        entries.add(ModItems.CoconutCanister);
+                        entries.add(ModItems.GummyBoots);
 
                         entries.add(ModItems.CoconutBelt);
 

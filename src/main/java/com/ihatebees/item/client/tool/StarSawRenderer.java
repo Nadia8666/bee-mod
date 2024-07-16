@@ -1,6 +1,6 @@
 package com.ihatebees.item.client.tool;
 
-import com.ihatebees.item.custom.StarSawSwordItem;
+import com.ihatebees.item.custom.weapon.StarSawSwordItem;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 public class StarSawRenderer extends GeoItemRenderer<StarSawSwordItem> {

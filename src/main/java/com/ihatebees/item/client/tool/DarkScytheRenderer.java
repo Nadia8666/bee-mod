@@ -1,6 +1,6 @@
 package com.ihatebees.item.client.tool;
 
-import com.ihatebees.item.custom.DarkScytheSwordItem;
+import com.ihatebees.item.custom.weapon.DarkScytheSwordItem;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 public class DarkScytheRenderer extends GeoItemRenderer<DarkScytheSwordItem> {

@@ -1,6 +1,6 @@
 package com.ihatebees.item.client.tool;
 
-import com.ihatebees.item.custom.StarShowerItem;
+import com.ihatebees.item.custom.weapon.StarShowerItem;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 
 public class StarShowerRenderer extends GeoItemRenderer<StarShowerItem> {

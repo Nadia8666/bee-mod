@@ -1,7 +1,7 @@
 package com.ihatebees.item.client.tool;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.DarkScytheSwordItem;
+import com.ihatebees.item.custom.weapon.DarkScytheSwordItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.GeoModel;
 

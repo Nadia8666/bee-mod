@@ -1,4 +1,4 @@
-package com.ihatebees.item.custom;
+package com.ihatebees.item.custom.weapon;
 
 import com.ihatebees.item.client.tool.StarSawRenderer;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;

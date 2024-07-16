@@ -1,7 +1,7 @@
 package com.ihatebees.item.client.armor;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.MasterArmorItem;
+import com.ihatebees.item.custom.armor.MasterArmorItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.GeoModel;
 

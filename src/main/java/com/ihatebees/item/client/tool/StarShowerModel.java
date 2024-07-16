@@ -1,7 +1,7 @@
 package com.ihatebees.item.client.tool;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.StarShowerItem;
+import com.ihatebees.item.custom.weapon.StarShowerItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.GeoModel;
 

@@ -1,7 +1,12 @@
 package com.ihatebees.item;
 
 import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.*;
+import com.ihatebees.item.custom.armor.*;
+import com.ihatebees.item.custom.buff.CBlessingItem;
+import com.ihatebees.item.custom.buff.GummyStarPassiveItem;
+import com.ihatebees.item.custom.buff.PopStarPassiveItem;
+import com.ihatebees.item.custom.buff.ScorchingStarPassiveItem;
+import com.ihatebees.item.custom.weapon.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -42,11 +47,18 @@ public class ModItems {
     public static final Item BasicBoots = registerItem("basicboots",
             new BasicArmorItem(ModArmor.BASIC_ARMOR, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+
+        //// pants, other
+
+        public static final Item BeekeepingPants = registerItem("beekeeping_pants",
+            new BasicArmorItem(ModArmor.BASIC_ARMOR, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+
+
     // custom weapons
     public static final Item StarSaw = registerItem("starsaw",
-            new StarSawSwordItem(ModToolMaterials.BITCH, 6, 16, new FabricItemSettings()));
+            new StarSawSwordItem(ModToolMaterials.BITCH, 5, 16, new FabricItemSettings()));
     public static final Item DarkScythe = registerItem("darkscythe",
-            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 9,-3.5f, new FabricItemSettings().fireproof()));
+            new DarkScytheSwordItem(ModToolMaterials.ENDGAME, 8,-3.5f, new FabricItemSettings().fireproof()));
     public static final Item Gummyballer = registerItem("gummyballer",
             new GummyballerSwordItem(ModToolMaterials.ENDGAME, 6, -3, new FabricItemSettings()));
     public static final Item TidePopper = registerItem("tidepopper",

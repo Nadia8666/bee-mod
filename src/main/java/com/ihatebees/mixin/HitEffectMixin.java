@@ -1,6 +1,6 @@
 package com.ihatebees.mixin;
 
-import com.ihatebees.item.custom.DarkScytheSwordItem;
+import com.ihatebees.item.custom.weapon.DarkScytheSwordItem;
 import com.ihatebees.particle.ModParticles;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;

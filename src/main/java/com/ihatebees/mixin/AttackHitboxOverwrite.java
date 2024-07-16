@@ -1,11 +1,9 @@
 package com.ihatebees.mixin;
 
-import com.ihatebees.BeeMod;
-import com.ihatebees.item.custom.DarkScytheSwordItem;
-import com.ihatebees.item.custom.StarSawSwordItem;
+import com.ihatebees.item.custom.weapon.DarkScytheSwordItem;
+import com.ihatebees.item.custom.weapon.StarSawSwordItem;
 import com.ihatebees.sound.ModSounds;
 import com.llamalad7.mixinextras.sugar.Local;
-import com.mojang.authlib.GameProfile;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityGroup;
@@ -25,21 +23,16 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import org.slf4j.LoggerFactory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 @Mixin(PlayerEntity.class)
 public abstract class AttackHitboxOverwrite extends LivingEntity {

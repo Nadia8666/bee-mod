@@ -53,7 +53,7 @@ public class StarShowerEntity
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
-        double dmg = 1;
+        double dmg = 2;
         int k = entity instanceof PlayerEntity ? 1 : 0;
             entity.damage(this.getDamageSources().thrown(this, this.getOwner()), (float) dmg);
     }

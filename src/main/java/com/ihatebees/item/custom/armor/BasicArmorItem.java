@@ -1,4 +1,4 @@
-package com.ihatebees.item.custom;
+package com.ihatebees.item.custom.armor;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
@@ -33,9 +33,6 @@ public class BasicArmorItem extends ArmorItem implements GeoItem {
     public BasicArmorItem(ArmorMaterial armorMaterial, Type type, Settings properties) {
         super(armorMaterial, type, properties);
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-
-
-
         if (this.getSlotType() == EquipmentSlot.HEAD) {
             builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.randomUUID(), "Armor", 2, EntityAttributeModifier.Operation.ADDITION));
             builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID.randomUUID(), "Armor toughness", 2, EntityAttributeModifier.Operation.ADDITION));
@@ -43,17 +40,12 @@ public class BasicArmorItem extends ArmorItem implements GeoItem {
         } else if (this.getSlotType()==EquipmentSlot.CHEST) {
             builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.randomUUID(), "Armor", 3, EntityAttributeModifier.Operation.ADDITION));
             builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID.randomUUID(), "Armor toughness", 1, EntityAttributeModifier.Operation.ADDITION));
-            builder.put(EntityAttributes.GENERIC_LUCK, new EntityAttributeModifier(UUID.randomUUID(), "Luck", 1.05, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+            builder.put(EntityAttributes.GENERIC_LUCK, new EntityAttributeModifier(UUID.randomUUID(), "Luck", .1, EntityAttributeModifier.Operation.MULTIPLY_BASE));
         } else if (this.getSlotType()==EquipmentSlot.FEET)  {
-
-
                 builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID.randomUUID(), "Armor", 2, EntityAttributeModifier.Operation.ADDITION));
                 builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID.randomUUID(), "Armor toughness", 1, EntityAttributeModifier.Operation.ADDITION));
-                builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(UUID.randomUUID(), "Movement Speed", 1.1, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
-
-
+                builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(UUID.randomUUID(), "Movement Speed", .1, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
             }
-
         this.attributeModifiers = builder.build();
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }

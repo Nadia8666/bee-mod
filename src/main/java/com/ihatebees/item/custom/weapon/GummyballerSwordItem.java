@@ -1,6 +1,5 @@
-package com.ihatebees.item.custom;
+package com.ihatebees.item.custom.weapon;
 
-import com.ihatebees.entity.custom.ComboProjectileEntity;
 import com.ihatebees.entity.custom.GummyballEntity;
 import com.ihatebees.sound.ModSounds;
 import net.minecraft.entity.EquipmentSlot;

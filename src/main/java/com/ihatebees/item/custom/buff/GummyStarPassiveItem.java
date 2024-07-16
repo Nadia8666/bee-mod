@@ -1,4 +1,4 @@
-package com.ihatebees.item.custom;
+package com.ihatebees.item.custom.buff;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
@@ -19,16 +19,19 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
-public class PopStarPassiveItem extends Item {
+
+public class GummyStarPassiveItem extends Item {
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    public PopStarPassiveItem(Settings settings) {
+    public GummyStarPassiveItem(Settings settings) {
         super(settings);
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID.randomUUID(), "Armor toughness", 1, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(UUID.randomUUID(), "Armor knockback resistance", .2, EntityAttributeModifier.Operation.ADDITION));
 
         this.attributeModifiers = builder.build();
     }
+
+    @Override
 
 
     public int getMaxUseTime(ItemStack stack) {
@@ -36,11 +39,11 @@ public class PopStarPassiveItem extends Item {
     }
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*10, 0));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1,0));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20*45, 1));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 20*45, 2));
-        user.getWorld().playSound((PlayerEntity) user, user.getX(),user.getY(),user.getZ(), ModSounds.ITEM_POPSTAR, SoundCategory.RECORDS, 0.3f, 1f);
+
+        user.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*2, 0));
+        user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20*45, 3));
+        user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*45, 3));
+        user.getWorld().playSound((PlayerEntity) user, user.getX(),user.getY(),user.getZ(), ModSounds.ITEM_GUMMYSTAR, SoundCategory.RECORDS, 0.3f, 1f);
         user.getItemCooldownManager().set(this,20*60*3);
         return super.use(world, user, hand);
     }

@@ -16,7 +16,7 @@ public enum ModArmor implements ArmorMaterial {
 
     MASTER_ARMOR("master_armor", 35, new int[] { 0, 0, 0, 0 }, 30,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 0f, 0f, () -> Ingredient.ofItems(ModBlocks.EXTREME_PACKHONEY)),
-    BASIC_ARMOR("basic_armor", 15, new int[] { 0, 0, 0, 0 }, 4,
+    BASIC_ARMOR("basic_armor", 15, new int[] { 0, 0, 2, 0 }, 4,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, 0f, () -> Ingredient.ofItems(ModBlocks.BIG_PACKHONEY)),
     ADVANCED_ARMOR("advanced_armor", 25, new int[] { 0, 0, 0, 0 }, 15,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0f, 0f, () -> Ingredient.ofItems(ModBlocks.HUGE_PACKHONEY)),
